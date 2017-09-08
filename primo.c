@@ -17,11 +17,16 @@ int primo(int x){
 
 int indexPrimo(int x){
 	int index = 0, i = 1;
-	while(i <= x){
-   	    if(primo(i)){
-            index++;            
-        }	 
-		i++;   
+	if(primo(x)){
+		while(i <= x){
+  	        if(primo(i)){
+                index++;            
+	        }	 
+			i++;   
+		}
+	}
+	else{
+		return 0;
 	}
 	return index;
 }
