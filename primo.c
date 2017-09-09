@@ -47,3 +47,28 @@ int indexForPrime(int x){
 	}
 	return cont-1;
 }
+
+/* A função recebe um número inteiro e o decompõe ele em fatores primos*/
+void decompose(int x){
+	int* arrayLocal = (int *)malloc(25 * sizeof(int));
+	int i = 0, j, cont = 2;
+	while(x > 1){
+		if(prime(cont)){
+			if(x % cont == 0){
+                x = x / cont;
+			    arrayLocal[i] = cont;
+				i++;				
+			}
+			else{
+				cont++;
+			}				
+		}
+		else{
+			cont++;
+		}
+	}
+	printf("Decompose: ");
+	for(j=0;j<i;j++){
+		printf("%d, ", arrayLocal[j]);
+	}
+}
