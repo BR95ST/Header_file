@@ -1,2 +1,3 @@
-int primo(int x);
-int indexPrimo(int x);
+int prime(int x);
+int indexForPrime(int x);
+int primeForIndex(int x);
