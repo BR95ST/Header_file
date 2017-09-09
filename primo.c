@@ -33,3 +33,17 @@ int indexPrimo(int x){
 	}
 	return index;
 }
+
+/*  A função recebe um número inteiro que representa o index de um número primo e devolve o número primo.
+    EX: caso a função receba o número 34 será retornado o valor 139, pois o numero 139 é o 34º primo. 
+*/
+int indexParaPrimo(int x){
+	int contPrimo = 0, cont = 2;
+	while(contPrimo < x){
+		if(primo(cont)){
+			contPrimo++;			
+		}
+		cont++;
+	}
+	return cont-1;
+}
