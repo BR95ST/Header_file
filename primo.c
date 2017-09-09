@@ -1,7 +1,7 @@
 #include "primo.h"
 
 /*  A função recebe um número e retorna 1 em caso de primo ou 0 se o número não for primo.*/
-int primo(int x){
+int prime(int x){
 	int i, cont = 0;
 	for(i=1;i<x+1;i++){
 		if(x % i == 0){
@@ -18,11 +18,11 @@ int primo(int x){
 /* A função recebe um número e devolve sua posição entre os números primos.
    EX: caso a função receba o número 139 será retornado o valor 34, pois o numero 139 é o 34º primo.
 */
-int indexPrimo(int x){
+int primeForIndex(int x){
 	int index = 0, i = 1;
-	if(primo(x)){
+	if(prime(x)){
 		while(i <= x){
-  	        if(primo(i)){
+  	        if(prime(i)){
                 index++;            
 	        }	 
 			i++;   
@@ -37,10 +37,10 @@ int indexPrimo(int x){
 /*  A função recebe um número inteiro que representa o index de um número primo e devolve o número primo.
     EX: caso a função receba o número 34 será retornado o valor 139, pois o numero 139 é o 34º primo. 
 */
-int indexParaPrimo(int x){
+int indexForPrime(int x){
 	int contPrimo = 0, cont = 2;
 	while(contPrimo < x){
-		if(primo(cont)){
+		if(prime(cont)){
 			contPrimo++;			
 		}
 		cont++;
