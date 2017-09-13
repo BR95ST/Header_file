@@ -20,10 +20,6 @@ float area_triangulo(float b, float h){
 	return (b * h) / 2;
 }
 
-float area_trianguloRet(float b, float c){
-	return (b * c) / 2;
-}
-
 float area_trianguloEqui(float l){
 	return l * l * sqrt(3 / 4);
 }
